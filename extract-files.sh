@@ -59,6 +59,25 @@ if [ -z "${SRC}" ]; then
     SRC=adb
 fi
 
+# Load wrapped shim
+function blob_fixup() {
+    case "${1}" in
+
+    vendor/lib/libmot_gpu_mapper.so)
+        sed -i "s/libgui/libwui/" "${2}"
+        ;;
+
+    vendor/lib/libmmcamera_vstab_module.so)
+        sed -i "s/libgui/libwui/" "${2}"
+        ;;
+
+    vendor/lib/libjscore.so)
+        sed -i "s/libgui/libwui/" "${2}"
+        ;;
+
+    esac
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${REVENGEOS_ROOT}" false "${CLEAN_VENDOR}"
 

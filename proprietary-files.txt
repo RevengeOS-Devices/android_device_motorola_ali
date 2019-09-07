@@ -145,7 +145,7 @@ vendor/lib/libseemore.so
 vendor/lib/libmot_afd.so
 
 # Camera - from deen_sprout q
-vendor/lib/libmot_gpu_mapper.so 
+vendor/lib/libmot_gpu_mapper.so|9f4d96542314976a8384f686a2a4c49d321999fe
 
 # Camera-bin
 vendor/bin/mm-qcamera-app
@@ -699,7 +699,7 @@ vendor/lib/libmmcamera_dcrf_lib.so
 vendor/lib/libmmcamera_trueportrait_lib.so
 vendor/lib/libmmcamera_chromaflash_lib.so
 vendor/lib/libmmcamera_dw9763_eeprom.so
-vendor/lib/libmmcamera_vstab_module.so
+vendor/lib/libmmcamera_vstab_module.so|bc3e6f0fafe486b13e07abc336a54d1f616cbf40
 vendor/lib/libmmcamera_eeprom_util.so
 vendor/lib/libmmcamera_pdafcamif.so
 vendor/lib/libmmcamera_mot_imx362.so
