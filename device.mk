@@ -339,10 +339,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
-
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -371,6 +367,7 @@ PRODUCT_PACKAGES += \
     init.qcom.ril.sh \
     ueventd.qcom.rc \
     init.class_main.sh \
+    init.qcom.post_boot.sh \
     init.hidl.sensor.rc \
     init.qcom.sensors.sh \
     init.qti.fm.sh \

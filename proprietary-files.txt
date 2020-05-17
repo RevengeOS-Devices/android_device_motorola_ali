@@ -1503,9 +1503,14 @@ vendor/lib64/sensors.rp.so
 vendor/lib64/sensors.ssc.so
 
 # Thermal
+vendor/bin/hw/android.hardware.thermal@1.0-service
 vendor/bin/thermal-engine
+vendor/etc/init/android.hardware.thermal@1.0-service.rc
+vendor/etc/thermal-engine.conf
+vendor/lib/hw/android.hardware.thermal@1.0-impl.so
+vendor/lib/hw/thermal.msm8953.so
 -vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
+vendor/lib/libthermalioctl.so
 
 # Time services - from LA.UM.8.6.r1-03400-89xx.0
 -vendor/app/TimeService/TimeService.apk|4a37afd1395758d946580af184a738e3c657b1e2
