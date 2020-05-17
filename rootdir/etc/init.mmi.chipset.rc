@@ -55,6 +55,7 @@ on moto-charger
     setprop sys.usb.config charging
     start qcom-post-boot
     start vendor.hvdcp_opti
+    start vendor.power_off_alarm
     start gbmodinstall
     start vendor.charge_only_mode
     start vendor.batt_health
