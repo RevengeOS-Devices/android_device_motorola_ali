@@ -10,10 +10,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.video=false \
     persist.vendor.audio.dualmic.config=endfire \
     persist.vendor.audio.fluence.audiorec=false \
-    persist.vendor.audio.fluence.speaker=false \
-    persist.vendor.audio.fluence.voicecall=false \
+    persist.vendor.audio.fluence.speaker=true \
+    persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicecomm=false \
-    persist.vendor.audio.fluence.voicerec=false \
+    persist.vendor.audio.fluence.voicerec=true \
     persist.vendor.audio.hw.binder.size_kbyte=1024 \
     persist.vendor.audio.ras.enabled=false \
     ro.vendor.audio.sdk.ssr=false \
@@ -41,8 +41,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.tunnel.encode=false \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
-    vendor.voice.path.for.pcm.voip=true \
-    vendor.audio.offload.min.duration.secs=60
+    vendor.voice.path.for.pcm.voip=false \
+    vendor.audio.offload.min.duration.secs=60 \
+    ro.config.vc_call_vol_steps=8
 
 # Audio ACDB
 PRODUCT_PROPERTY_OVERRIDES += \
