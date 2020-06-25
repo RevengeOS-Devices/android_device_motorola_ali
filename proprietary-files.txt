@@ -91,7 +91,6 @@ etc/permissions/privapp-permissions-com.motorola.camera2.xml
 etc/permissions/com.motorola.camera2.xml
 -priv-app/MotCamera2/MotCamera2.apk;PRESIGNED
 vendor/lib/hw/camera.msm8953.so
-vendor/lib/libhal_dbg.so
 vendor/lib/libactuator_dw9714p.so
 vendor/lib/libactuator_lc898217xh.so
 vendor/lib/libactuator_mot_ak7371_bear.so
@@ -115,7 +114,6 @@ vendor/lib/libjpegehw.so
 vendor/lib/libmm-qcamera.so
 vendor/lib/libmmjpeg_interface.so
 vendor/lib/libmmjpeg.so
-vendor/lib/libmmlib2d_interface.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libmot_afd.so
@@ -772,7 +770,6 @@ vendor/lib/libmmcamera_isp_wb40.so
 vendor/lib/libmmcamera_isp_fovcrop_encoder40.so
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_cpp_module.so
-vendor/lib/libmmcamera2_stats_lib.so
 vendor/lib/libmmcamera2_dcrf.so
 vendor/lib/libmmcamera2_frame_algorithm.so
 vendor/lib/libmmcamera2_pp_buf_mgr.so
@@ -1218,6 +1215,13 @@ vendor/bin/pm-service|8a521f14576d0d2edf03b4500a54379d37e15d4e
 vendor/lib/libperipheral_client.so|b75a6adac094ddcd6ded9415cae83e18d1e7e5d0
 vendor/lib64/libperipheral_client.so|20c8ab21fe28e41f60b59af0ba72de9f6b1996d2
 
+# Power-Hardware
+vendor/bin/hw/android.hardware.power@1.0-service
+vendor/etc/init/android.hardware.power@1.0-service.rc
+vendor/lib/hw/android.hardware.power@1.0-impl.so
+vendor/lib/hw/power.default.so
+vendor/lib/hw/power.qcom.so
+
 # Power-off alarm - from LA.UM.8.6.r1-03400-89xx.0
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|c214e1f7de878aeebe642857d6283bbeca0c7a3e
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|42c161f4b3033ee2ce33ec3e505031e9137577e7
@@ -1419,7 +1423,6 @@ product/lib64/lib-imsvt.so|5b9b30b2ee323f021ccfdf72f2b4e7ea54681f39
 product/lib64/lib-imsvtcore.so|397988b0536ca0a72707bfa573f1c8898207eae4
 product/lib64/lib-imsvtextutils.so|eeb28ae21c299c23015cee95daea28e72c21f133
 product/lib64/lib-imsvtutils.so|2acd66f67e94a71a94de8792e6ccc90750b9ef68
-product/lib64/lib-imsSDP.so
 product/lib64/libdiag_system.so|d2df4091312b9fb9a4b6e0daa420bad676419426
 product/lib64/libimscamera_jni.so|41512d3b9cd72b96e9b8ad5463566a3769f06cc1
 product/lib64/libimsmedia_jni.so|fe4e642816530841a1e59419661dd4db60737c8f
@@ -1449,6 +1452,7 @@ vendor/lib/lib-imsrcsbaseimpl.so|79ebfa562898462cd7c8df0e4f2f9bb5924d159d
 vendor/lib/lib-imsvtcore.so|3831e2c77be45e209892316b0b2a2e8467a3c26d
 vendor/lib/lib-imsxml.so|49a236c6e0971c3d5099316593e75304323b338d
 vendor/lib/lib-imsSDP.so
+vendor/lib64/lib-imsSDP.so
 vendor/lib/lib-rtpcommon.so|6d4fda5a52de93be62b60d40a7b6bb2188e4f6fe
 vendor/lib/lib-rtpcore.so|bf07f83994123aca0dc97a3b87459d33bdf693b7
 vendor/lib/lib-rtpsl.so|e1738f0bfe55f4808f514f8e6244c2f4750523e7
@@ -1509,7 +1513,7 @@ vendor/etc/init/android.hardware.thermal@1.0-service.rc
 vendor/etc/thermal-engine.conf
 vendor/lib/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib/hw/thermal.msm8953.so
--vendor/lib/libthermalclient.so
+vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
 # Time services - from LA.UM.8.6.r1-03400-89xx.0
