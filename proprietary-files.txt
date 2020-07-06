@@ -1,28 +1,23 @@
-# ADSP - from LA.UM.8.6.r1-03400-89xx.0
-vendor/bin/adsprpcd|a5e878691577485c9f7ee33dfe02384a13f0a265
-vendor/lib/libadsprpc.so|e5723d139f802fd77ca2a31e300ca9e87ede2033
-vendor/lib/libadsp_default_listener.so|c9a1ee00b32a93a9496ec84393afa0625e929eed
-vendor/lib/libfastcvadsp_stub.so|996345605e1d631151a6b4e9cd9f65b2c7e82dac
-vendor/lib/libfastcvopt.so|2df00c3827fe1db322084cb3935241f17d1532f4
-vendor/lib/libmdsprpc.so|0fae5249989d4c94c7abd737cedf44b1356375ee
-vendor/lib64/libadsprpc.so|9a6d9772d55b747f7317a57fdd21a01726b646e7
-vendor/lib64/libadsp_default_listener.so|d7436ae6255671b4c3af533b5c89d91d75d5069e
-vendor/lib64/libfastcvadsp_stub.so|f101b66fa4a450b5af2e6aa9f7aaa28f9a876005
-vendor/lib64/libfastcvopt.so|f5e25aa055a57e23530b858bf7dd204a6009effc
-vendor/lib64/libmdsprpc.so|ecb6b6f38a1863d9dc6e0e1c0785a4c599b16b42
+# ADSP
+vendor/bin/adsprpcd
+vendor/lib/libadspd.so
+vendor/lib/libadsprpc.so
+vendor/lib/libadsp_default_listener.so
+vendor/lib/libfastcvadsp_stub.so
+vendor/lib/libfastcvopt.so
+vendor/lib/libmdsprpc.so
+vendor/lib/libsdsprpc.so
+# CDSP
+vendor/lib/libcdsprpc.so
 
-# ADSP modules - from LA.UM.8.6.r1-03400-89xx.0
-vendor/lib/rfsa/adsp/dirac_resource.dar|d9b3693eab8c520ef859236b8235752188b7cba0
-vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so|f4d8675a46c5e52add8f8e90e35b29cd33ac582b
-vendor/lib/rfsa/adsp/libapps_mem_heap.so|5c82ad9cfe3f30105d899e2a4e90cc7566f81252
-vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so|b9f68e320d24e9c51871a2056e1f47239bd1cb40
-vendor/lib/rfsa/adsp/libdirac-capiv2.so|e56031dfaee094d5267e3cc16625cfceaa07cc27
-vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|3e9c52069ff07e50191d3b3afb33b30409241ab6
-vendor/lib/rfsa/adsp/libdspCV_skel.so|628985174b0088bed21c866d7984d23855e5e150
-vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so|944169db3ac67056b92ef4f850f69346958370b5
-vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|1ff4a48009e88435d93fd2b9b0c5ea59cedbb4f7
-vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
-vendor/lib/rfsa/adsp/libfastcvadsp.so|9818625bfa018f517e32a8f4a1e7fb4b255e5049
+# ADSP-Modules
+vendor/lib/rfsa/adsp/libapps_mem_heap.so
+vendor/lib/rfsa/adsp/libdspCV_skel.so
+vendor/lib/rfsa/adsp/libfastcvadsp.so
+vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
+vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
+vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
+vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
 # Audio
 vendor/lib/libacdb-fts.so
@@ -49,7 +44,14 @@ vendor/etc/acdbdata/common/Global_cal.acdb
 vendor/etc/acdbdata/common/Handset_cal.acdb
 vendor/etc/acdbdata/common/Hdmi_cal.acdb
 vendor/etc/acdbdata/common/Headset_cal.acdb
-vendor/etc/acdbdata/common/Speaker_cal.acdb
+vendor/etc/acdbdata/retid/Speaker_cal.acdb
+vendor/etc/acdbdata/retid/Bluetooth_cal.acdb
+vendor/etc/acdbdata/retid/General_cal.acdb
+vendor/etc/acdbdata/retid/Global_cal.acdb
+vendor/etc/acdbdata/retid/Handset_cal.acdb
+vendor/etc/acdbdata/retid/Hdmi_cal.acdb
+vendor/etc/acdbdata/retid/Headset_cal.acdb
+vendor/etc/acdbdata/retid/Speaker_cal.acdb
 
 # Bluetooth - from LA.UM.8.6.r1-03400-89xx.0
 -lib/libbtconfigstore.so|00d1330370a6ac6bd03938009998a23ce310b0cf
@@ -951,8 +953,6 @@ vendor/firmware/marley-dsp2-aov-vrgain.bin
 vendor/firmware/marley-dsp3-aov-control.wmfw
 
 # FM
--product/lib/vendor.qti.hardware.fm@1.0.so
--product/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
@@ -1144,9 +1144,6 @@ vendor/etc/init/motorola.hardware.audio.adspd@1.0-service.rc
 vendor/lib/motorola.hardware.audio.adspd@1.0-impl.so
 vendor/lib/motorola.hardware.audio.adspd@1.0_vendor.so
 vendor/lib/motorola.hardware.audio.adspd@1.0.so
-vendor/lib64/vndk/libtinyalsa.so
-vendor/lib64/motorola.hardware.audio.adspd@1.0-impl.so
-vendor/lib64/motorola.hardware.audio.adspd@1.0.so
 
 # Moto Permissions
 product/etc/permissions/com.motorola.moto-uirefresh.xml
@@ -1161,28 +1158,20 @@ vendor/bin/charge_only_mode
 vendor/bin/hvdcp_opti
 
 # Perf - from LA.UM.8.6.r1-03400-89xx.0
-lib/vendor.qti.hardware.perf@1.0.so|b4969fa797d1957ad8f35d4f84615608f0e9cc2e
-lib/vendor.qti.hardware.perf@2.0.so|71592601eed5e022f4979293d68deb98e688a3d4
-lib64/vendor.qti.hardware.perf@1.0.so|8858021553ea41933cdaaa4a68e9d4d15609db46
-lib64/vendor.qti.hardware.perf@2.0.so|9353709cc2e2af8c4edd3967b5362ede79a72805
-vendor/bin/energy-awareness|def07e366347c7f0a7778b748acb49557ab21d2a
-vendor/bin/msm_irqbalance|b5e55b4b0934b65b7dd5d2201f9a70f6f77a4e7c
-vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|a92bcd9304b9f7836225ec54d127061cf4fa85e3
-vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|cc8658db5e19f8e5e575fb986e7d38147e675f8d
-vendor/lib64/libperfconfig.so|ccedfa4263476affae09325320171a6e7f129d86
-vendor/lib64/libperfgluelayer.so|f03b71e5c3a26028a9b72c7e34b1d371a8793061
-vendor/lib64/libqti-perfd.so|4bf366422ea6fd251cb17fe9e32a9f34150e49ab
-vendor/lib64/libqti-perfd-client.so|cfdfe3d443085feae4cf4af398d711722b904388
-vendor/lib64/libqti-util.so|4911109f327c4bf9d1d34acc14082f78e69b4ccb
-vendor/lib64/vendor.qti.hardware.perf@1.0.so|8858021553ea41933cdaaa4a68e9d4d15609db46
-vendor/lib64/vendor.qti.hardware.perf@2.0.so|9353709cc2e2af8c4edd3967b5362ede79a72805
-vendor/lib/libperfconfig.so|dbfa02fbef1b71f32e4e9791a26cbb33a2acc679
-vendor/lib/libperfgluelayer.so|8adbb803d42b07caef0e96fdba336b7872194b3a
-vendor/lib/libqti-perfd.so|8c66ab0e61cb36852ca4e582f93912db8c2f11b9
-vendor/lib/libqti-perfd-client.so|eb81a99bab35f29b7977bde878ea2a29e2abe18c
-vendor/lib/libqti-util.so|da7cfbe08e99dfa77fb29f06878b5d676af40d09
-vendor/lib/vendor.qti.hardware.perf@1.0.so|b4969fa797d1957ad8f35d4f84615608f0e9cc2e
-vendor/lib/vendor.qti.hardware.perf@2.0.so|71592601eed5e022f4979293d68deb98e688a3d4
+vendor/bin/energy-awareness
+vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
+vendor/bin/msm_irqbalance
+vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
+vendor/etc/perf/commonresourceconfigs.xml
+vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/targetconfig.xml
+vendor/etc/perf/targetresourceconfigs.xml
+vendor/lib/libperfgluelayer.so
+vendor/lib/libqti-perfd-client.so
+vendor/lib/libqti-perfd.so
+vendor/lib/libqti-util.so
+vendor/lib/libqti-utils.so
+vendor/lib/vendor.qti.hardware.perf@1.0.so
 
 # Perf - IOP
 lib/libqti-iopd-client_system.so
@@ -1287,8 +1276,8 @@ vendor/bin/netmgrd|0da609f02d602a81b6f7c77a49ba8123a8d88ef1
 vendor/bin/port-bridge|3e13f94cb346fd119c3752e97905869f99de4740
 vendor/bin/adpl|1a2321d3f0b360524d03f16f5ef1f849aeced7ee
 vendor/bin/hw/qcrild|81eb6798900284293c14019d2aae5d9d65ad6f4a
-vendor/etc/data/dsi_config.xml
-vendor/etc/data/netmgr_config.xml
+vendor/etc/data/dsi_config.xml|d4c69e7a0913dde661640320ff089261f8a1ac0c
+vendor/etc/data/netmgr_config.xml|2b2b04459d6bc578d59cacd1e438bc7e32a68c67
 vendor/etc/init/dataadpl.rc|cd4907d9bfd438fe5f5c86f5d6cec590ac0bac2a
 vendor/etc/init/dataqti.rc|6abfd1a850d782adbbb6f42c9d8ca870036b2ad1
 vendor/etc/init/netmgrd.rc|fd3457c69a9fab11b87d0d1b494188fe089684cd
@@ -1451,8 +1440,6 @@ vendor/lib/lib-imsrcs-v2.so|f9c2486ef4e969c275325089849dba8090014357
 vendor/lib/lib-imsrcsbaseimpl.so|79ebfa562898462cd7c8df0e4f2f9bb5924d159d
 vendor/lib/lib-imsvtcore.so|3831e2c77be45e209892316b0b2a2e8467a3c26d
 vendor/lib/lib-imsxml.so|49a236c6e0971c3d5099316593e75304323b338d
-vendor/lib/lib-imsSDP.so
-vendor/lib64/lib-imsSDP.so
 vendor/lib/lib-rtpcommon.so|6d4fda5a52de93be62b60d40a7b6bb2188e4f6fe
 vendor/lib/lib-rtpcore.so|bf07f83994123aca0dc97a3b87459d33bdf693b7
 vendor/lib/lib-rtpsl.so|e1738f0bfe55f4808f514f8e6244c2f4750523e7

@@ -43,7 +43,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.use.sw.ape.decoder=true \
     vendor.voice.path.for.pcm.voip=false \
     vendor.audio.offload.min.duration.secs=60 \
-    ro.config.vc_call_vol_steps=8
+    ro.config.vc_call_vol_steps=15
 
 # Audio ACDB
 PRODUCT_PROPERTY_OVERRIDES += \

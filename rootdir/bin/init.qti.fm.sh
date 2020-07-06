@@ -26,7 +26,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-setprop vendor.hw.fm.init 0
+setprop hw.fm.init 0
 
 mode=`getprop vendor.hw.fm.mode`
 version=199217
@@ -85,6 +85,6 @@ case $exit_code_fm_qsoc_patches in
    ;;
 esac
 
-setprop vendor.hw.fm.init 1
+setprop hw.fm.init 1
 
 exit 0

@@ -488,3 +488,8 @@ on property:vendor.wifi.station=true
 on property:vendor.wifi.station=false
     write /sys/module/wlan/parameters/sar_sta disabled
 
+on property:hw.fm.init=1
+    write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
+
+on property:hw.fm.init=0
+    write /sys/module/radio_iris_transport/parameters/fmsmd_set 0
